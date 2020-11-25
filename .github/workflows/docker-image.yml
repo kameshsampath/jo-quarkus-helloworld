@@ -14,14 +14,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-  checkout:
+  checkoutAndBuild:
     runs-on: ubuntu-latest
     needs: [setup]
-    steps:
-
-  build:
-    runs-on: ubuntu-latest
-    needs: [checkout]
     steps:
       - name: Checkout
         id: git_checkout
@@ -42,7 +37,7 @@ jobs:
           path: target
   contianerBuild:
     runs-on: ubuntu-latest
-    needs: [build]
+    needs: [checkoutAndBuild]
     steps:
        - name: Download build target directory
          uses: actions/download-artifact@v2
