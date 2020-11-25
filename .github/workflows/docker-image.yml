@@ -56,7 +56,7 @@ jobs:
            file: ./src/main/docker/Dockerfile.jvm
            registry: ghcr.io
            tags: |
-            kameshsampath/jo-quarkus-helloworld:latest
-            kameshsampath/jo-quarkus-helloworld:master
+            ghcr.io/kameshsampath/jo-quarkus-helloworld:latest
+            ghcr.io/kameshsampath/jo-quarkus-helloworld:master
        - name: Image digest
          run: echo ${{ steps.docker_build_push.outputs.digest }}
