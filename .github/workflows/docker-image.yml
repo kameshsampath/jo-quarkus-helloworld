@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  setup:
+  checkoutAndBuild:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Docker Buildx
@@ -14,10 +14,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-  checkoutAndBuild:
-    runs-on: ubuntu-latest
-    needs: [setup]
-    steps:
       - name: Checkout
         id: git_checkout
         uses: actions/checkout@v2
