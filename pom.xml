@@ -65,9 +65,9 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <uberJar>true</uberJar>
-        </configuration>
+<!--        <configuration>-->
+<!--          <uberJar>true</uberJar>-->
+<!--        </configuration>-->
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
